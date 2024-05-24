@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./asset/img/favicon.ico">
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <title>지구온화나(샘플)</title>
+</head>
+<body>
+    <a href='https://www.korea4-h.or.kr/' target="_blink" class="sc-logo">
+        <h1 class="logo"></h1>
+    </a>
+    <div class="sc-date">
+        <div class="date-group">
+            <span class="year">2023</span>
+            <span class="date">1.11</span>
+            <span class="day">수</span>
+        </div>
+    </div>
+    <div class="sc-notif">
+        <!-- <span class="notif">첫번째두번째세번째네번째다섯번째여섯번째일곱번째여덟번째아홉번째열번째열한번째열두번째열세번째열네번째열다섯번째</span> -->
+    </div>
+    <div class="sc-temperature">
+        <div class="group-temperature">
+            <div class="temperature"></div>
+        </div>
+        <span class="value">??.?</span>
+    </div>
+    <div class="sc-play">
+        <div class="group-play">
+            <span class="play-btn"></span>>
+        </div>
+    </div>
+    <div class="sc-progress-bar">
+        <span class="bar"></span>
+    </div>
+    
+    <div class="sc-debug">
+        <div class="group-debug">
+            <span class="name">회전속도</span>
+            <input class="input number" id="speed" type="number" value="1" step="0.1">
+        </div>
+        <div class="group-debug">
+            <span class="name" >블룸</span>
+            <input class="input number" id="bloom" type="number" value="1" step="0.1" min="0">
+        </div>
+        <div class="group-debug">
+            <span class="name"  >입체값</span>
+            <input class="input number" id="dis" type="number" value="0" step="0.1">
+        </div>
+        <div class="group-debug">
+            <span class="name"  >줌 on/off</span>
+            <input class="input check" id="zoom" type="checkbox">
+        </div>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="./asset/js/debug.js" type="module"></script>
+<script src="./asset/js/control.js" type="module"></script>
+<script src="./asset/js/threeControl.js" type="module"></script>
+<script src="./asset/js/main.js" type="module"></script>
+
+</html> 

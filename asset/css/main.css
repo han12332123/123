@@ -1,0 +1,230 @@
+@import url(./common.css);
+@import url(./reset.css);
+
+
+
+
+
+.sc-logo{
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 100px;
+    height: 55.4px;
+}
+.sc-logo .logo{
+    background: url('../img/logo.png') center center/contain no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+
+.sc-date{
+    position: absolute;
+    left: 30px;
+    bottom: 25px;
+    width: 180px;
+    height: 85px;
+    /* background: #0f0 */
+    color:#fff;
+}
+.sc-date .date-group{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.sc-date .date-group .year{
+    display: block;
+    font-size: 17px;
+}
+.sc-date .date-group .date{
+    display: inline-block;
+    letter-spacing:2px;
+    font-size: 57px;
+    font-weight: 600;
+}
+.sc-date .date-group .day{
+    display: inline-block;
+    font-size: 20px;
+    padding: 2px 3px 6px;
+    margin-left: 8px;
+    border-radius:5px;
+    border:2px solid #fff;
+    position: absolute;
+    bottom: 16px;
+}
+
+
+
+.sc-notif{
+    position: absolute;
+    /* background: #f00; */
+    display: flex;
+    justify-content: center;
+    /* height: 100px; */
+    width: 100%;
+    left: 0;
+    top: 0;
+    /* transform: translate(-50%, 0); */
+    text-align: center;
+    /* overflow: hidden; */
+}
+
+.sc-notif .notif{
+    position: absolute;
+    top: -30px;
+    opacity: 0;
+    font-size: 16px;
+    color:rgb(0, 0, 0);
+    height: 100%;
+    line-height: 35px;
+    height: 35px;
+    display: inline-block;
+    background: rgba(255,255,255,1);
+    border-radius:30px;
+    padding: 0 25px;
+    box-sizing:border-box;
+}
+
+
+.sc-temperature{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.sc-temperature .group-temperature{
+    width: 40px;
+    height: 230px;
+    background: url('../img/temp-img-white.png')center center/cover no-repeat;
+}
+.sc-temperature .temperature{
+    width: 17px;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    background: #ff3a3a;
+    clip-path: polygon(0 90%, 100% 90%, 100% 95%, 0% 95%);
+    /* clip-path: polygon(0 lX, 100% rX, 100% 100%, 0% 100%); */
+}
+.sc-temperature .value{
+    color: #fff;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+
+/* 재생 컨트롤러 */
+.sc-play{
+    font-size: 0;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 15px;
+    height: 15px;
+    /* background: #f00; */
+}
+.sc-play .group-play{
+    position: relative;
+    display: flex;
+    /* gap: 20px; */
+    width: 100%;
+    height: 100%;
+    align-items:center;
+}
+.sc-play .play-btn{
+    height: 100%;
+    width: 100%;
+    transition: background-image 600ms;
+    background: center center/cover no-repeat ;
+    background-image: url('../img/play-ico.png');
+}
+.sc-play .play-btn.on{
+    background-image: url('../img/pause-ico.png');
+}
+.sc-play .play-btn:hover{
+    cursor:pointer;
+}
+
+
+
+.sc-progress-bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+}
+.sc-progress-bar .bar{
+    background: #fff;
+    width: 0;
+    height: 100%;
+    display: block;
+}
+
+
+.sc-debug{
+    padding: 0 10px;
+    width: 200px;
+    height: 250px;
+    background: #0ff;
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    display: none;
+}
+.sc-debug.on{
+    display: block;
+}
+.sc-debug .name{}
+.sc-debug .input{}
+
+
+
+/* -----------------------------------반응형 모바일----------------------------------- */
+@media screen and (max-width:768px){
+    .sc-logo .logo{
+        background: url('../img/mobile-logo.png') center center/contain no-repeat;
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .sc-notif{
+    }
+    .sc-notif .notif{
+        overflow: hidden;
+        color: #000;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        max-width:260px;
+        padding: 0 10px;
+    }
+
+
+    .sc-temperature .group-temperature{
+        width: 20px;
+        height: 115px;
+    }
+
+
+    .sc-temperature .temperature{
+        width: 8px;
+    }
+
+
+    .sc-temperature .value{
+        font-size: 16px;
+    }
+
+
+    .sc-play{
+        bottom: 20%;
+    }
+}
